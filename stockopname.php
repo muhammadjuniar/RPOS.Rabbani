@@ -60,6 +60,7 @@
                     </div>
                 </div>
                 <div class="col-2">
+                    <a href="scanner.php">
                     <div class="d-flex align-items-center">
                         <div class="feature-items-stock">
                             <span >
@@ -67,6 +68,7 @@
                             </span>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <div class="col-2">
                     <div class="d-flex align-items-center">

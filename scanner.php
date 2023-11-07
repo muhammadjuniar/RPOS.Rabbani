@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  Barcode result: <div id="dbr"></div>
+  <div id="videoOption">
+    Camera Sources: <select id="videoSource"></select>
+  </div>
+  <button id="go">Scan Barcode!</button>
+  <div>
+    <video style="float:left"></video>
+    <canvas id="canvas" width="640" height="480" style="display: none; float: left;"></canvas>
+  </div>
+</body>
+<script src="assets/js/scanner.js"></script>
+</html>
