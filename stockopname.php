@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <a href="plugin/scanner/websocket-server/www/index.html">
+                    <a href="scanner.html">
                     <div class="d-flex align-items-center">
                         <div class="feature-items-stock">
                             <span >
