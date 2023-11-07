@@ -124,6 +124,10 @@ a {
     margin-bottom: 140px;
 }
 
+.main-container-stock-selesai {
+    background: transparent;
+}
+
 .pageTop {
     padding: 10px;
 }

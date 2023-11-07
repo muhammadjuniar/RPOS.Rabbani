@@ -1,5 +1,5 @@
 <?php include "./components/header.php"; ?>
-<main class="main-container-stock">
+<main class="main-container-stock-selesai">
 
     <section id="topbar mb-3">
         <div class="container product-topbar fixed-top">
