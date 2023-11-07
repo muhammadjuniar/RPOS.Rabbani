@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
-    <title>Scanner</title>
-</head>
-<body>
-    <div class="container">
-        <div id="qr-reader" style="width: 300px"></div>
-        <div id="result"></div>
+<?php include "./components/header.php"; ?>
+<body style="background: #fff;">
+    <div class="container text-center" style="margin-top: 40%">
+        <div class="align-self-center">
+            <div id="qr-reader"></div>
+        </div>
+        <div>
+            <a href="stockopname.php"><button class="btn btn-primary mt-3"> Kembali </button></a>
+        </div>
     </div>
 
     <script>

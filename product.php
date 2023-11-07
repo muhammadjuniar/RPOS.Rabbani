@@ -105,40 +105,42 @@
             </div>
         </div>
 
-        <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                <div class="modal-body">
-                    <div class="justify-content-center" style="display:flex;padding-top:-4px;">
-                        <button type="submit" class="btn btn-eyebrow" data-bs-dismiss="modal" style="min-width:50px;max-height:2px !important;border:none !important;padding:3px"></button>
+        <div id="product-modal">
+            <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="justify-content-center" style="display:flex;padding-top:-4px;">
+                                <button type="submit" class="btn btn-eyebrow" data-bs-dismiss="modal" style="min-width:50px;max-height:2px !important;border:none !important;padding:3px"></button>
+                            </div>
+                            <form id='update-product' action="product.php">
+                            <h1 class="modal-title fs-5 pt-5 mb-2" id="updateModalLabel">Kemko Panjang Hasbi mst</h1>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label custom-label">Barcode</label>
+                                <input style="border:none;" type="text" class="form-control" value="BAA1CB09042A241">
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label custom-label">Warna</label>
+                                <input style="border:none;" type="text" class="form-control" value="Ashes or Roses">
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label custom-label">Ukuran</label>
+                                <input style="border:none;" type="text" class="form-control" value="XS">
+                            </div>
+                            <div class="mb-3 harga">
+                                <label for="recipient-name" class="col-form-label custom-label">Harga Dasar</label>
+                                <input style="border:none;border-bottom:1px solid #00000020;" type="text" class="form-control" value="Rp239.800">
+                            </div>
+                            <div class="mb-3 harga">
+                                <label for="recipient-name" class="col-form-label custom-label">Harga Jual</label>
+                                <input style="border:none;border-bottom:1px solid #00000020;" type="text" class="form-control" value="Rp249.800">
+                            </div>
+                            <div class="justify-content-center" style="display:flex;">
+                                <button type="submit" class="btn btn-success btn-simpan" style="min-width:300px;padding: 10px 0 10px 0; border-radius: 30px">Simpan</button>
+                            </div>
+                            </form>
+                        </div>
                     </div>
-                    <form id='update-product' action="product.php">
-                    <h1 class="modal-title fs-5 pt-5 mb-2" id="updateModalLabel">Kemko Panjang Hasbi mst</h1>
-                    <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label custom-label">Barcode</label>
-                        <input style="border:none;" type="text" class="form-control" value="BAA1CB09042A241">
-                    </div>
-                    <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label custom-label">Warna</label>
-                        <input style="border:none;" type="text" class="form-control" value="Ashes or Roses">
-                    </div>
-                    <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label custom-label">Ukuran</label>
-                        <input style="border:none;" type="text" class="form-control" value="XS">
-                    </div>
-                    <div class="mb-3 harga">
-                        <label for="recipient-name" class="col-form-label custom-label">Harga Dasar</label>
-                        <input style="border:none;border-bottom:1px solid #00000020;" type="text" class="form-control" value="Rp239.800">
-                    </div>
-                    <div class="mb-3 harga">
-                        <label for="recipient-name" class="col-form-label custom-label">Harga Jual</label>
-                        <input style="border:none;border-bottom:1px solid #00000020;" type="text" class="form-control" value="Rp249.800">
-                    </div>
-                    <div class="justify-content-center" style="display:flex;">
-                        <button type="submit" class="btn btn-success btn-simpan" style="min-width:300px;padding: 10px 0 10px 0; border-radius: 30px">Simpan</button>
-                    </div>
-                    </form>
-                </div>
                 </div>
             </div>
         </div>

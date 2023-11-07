@@ -11,6 +11,7 @@
     --checklist: rgba(189, 195, 213, 0.90);
     --red: #EB5757;
     --white_text: #FFFFFF;
+    --second-text-color: #99A6C0;
 }
 
 body {
@@ -120,7 +121,6 @@ a {
 
 .main-container-stock {
     background: transparent;
-    margin-bottom: 100px;
 }
 
 .pageTop {
@@ -566,7 +566,7 @@ h2{
     line-height: 16px; /* 114.286% */
 }
 
-.modal-dialog {
+#product-modal .modal-dialog {
     position: absolute;
     bottom: 10px;
     right: -10px;
@@ -579,7 +579,7 @@ h2{
     border-top-right-radius: 40px !important;
 }
 
-.modal {
+#product-modal .modal {
     --bs-modal-border-top-left-radius: 14px;
 }
 
@@ -625,6 +625,23 @@ h2{
 
 #stock-opname {
     padding-top: 70px;
+}
+
+.stock-topbar {
+    background: #fff;
+}
+
+.stock-topbar .title {
+    color: var(--dark_text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 133.333% */
+}
+
+.stock-topbar .topbar-icon {
+    margin-top: 13px;
 }
 
 .stock-opname .label {
@@ -918,4 +935,185 @@ input[type="date"]:before {
     input[type="date"]:before {
         margin-top: 6px !important;
     }
+}
+
+#save-button {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 90px; /* Place the button at the bottom of the page */
+    right: 15px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: var(--primary_green); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 100px; /* Rounded corners */
+    font-size: 12px; /* Increase font size */
+    width: 100px;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+#stock-modal .modal-dialog {
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    right: 10px;
+    z-index: 10040;
+    overflow: auto;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+#stock-modal .confirm-title {
+    color: var(--dark_text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+#stock-modal .confirm-content {
+    color: var(--second-text-color, #99A6C0);
+    /* body_text */
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#stock-modal .btn-confirm {
+    width: 128px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--primary_green);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    /* body_text */
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+#stock-opname-success {
+    font-family: 'Roboto', sans-serif;
+    background: var(--white_text);
+    margin: 0;
+    margin-top: 65px;
+    height: 600px;
+}
+
+#stock-opname-success .img-stock-success {
+    margin-top: 20px;
+}
+
+#stock-opname-success .text-stock-success {
+    color: var(--primary_green);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+#stock-opname-success .detail-success .label {
+    color: var(--primary_abu);
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 10px;
+}
+
+#stock-opname-success .detail-success .code {
+    color: var(--second-text-color);
+    /* body_text */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+#stock-opname-success .detail-success .date {
+    color: var(--primary_abu);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; 
+    margin-top: 5px;
+}
+
+#stock-opname-success .detail-success .count-number {
+    color: var(--primary_green);
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+#stock-opname-success .detail-success .detail-label {
+    margin-top: 10px;
+    color: var(--second-text-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+#stock-opname-success .buttons {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 10px; /* Place the button at the bottom of the page */
+    z-index: 99; /* Make sure it does not overlap */
+    padding-right: 10px;
+}
+
+#stock-opname-success .buttons .cetak-button {
+    border-radius: 10px;
+    color: var(--primary_abu);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+#stock-opname-success .buttons .stock-button {
+    border-radius: 10px;
+    color: var(--primary_green);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+#stock-opname-success .buttons .tambah-button {
+    margin-top: 10px;
+    border-radius: 10px;
+    color: var(--white_text, #FFF);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
 }

@@ -60,7 +60,7 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <a href="scanner.html">
+                    <a href="scanner.php">
                     <div class="d-flex align-items-center">
                         <div class="feature-items-stock">
                             <span >
@@ -203,8 +203,32 @@
                 </div>
             </div>
         </div>
+
     </section>
     <?php }; ?>
+
+    <button class="btn btn-success" id="save-button" title="Save" data-bs-toggle="modal" data-bs-target="#save-confirmation"
+    <?php if(!isset($_GET['keyword'])){ echo 'disabled'; }; ?>>Simpan</button>
+
+    <!-- Modals -->
+    <div id="stock-modal">
+        <div class="modal fade" id="save-confirmation" data-bs-backdrop="confirmation" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="text-end">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="confirm-title text-center">Konfirmasi Stock Opname</div>
+                        <div class="confirm-content">Apakah kamu yakin menyimpan stock opname nomor <br /> MSB1-O0001.SO-0001/JAN-FEB/2021 ?</div>
+                        <a href="stockOpnameSuccess.php">
+                            <div class="text-end"><button class="btn btn-sm btn-confirm">Ya, Simpan</button></div>
+                        </a>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </main>
 <?php include "./components/footer.php"; ?>
