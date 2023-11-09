@@ -11,7 +11,7 @@
                     <div class="col-12">
                         <div class="input-group mb-3">
                             <span class="input-group-text transparent right-border-none"><img src="assets/images/user_fill.svg" alt=""></span>
-                            <input type="text" id="userFieldAktivasi" onkeypress="enableButton()" class="form-control left-border-none right-border-none">
+                            <input type="text" id="userFieldAktivasi" class="form-control left-border-none right-border-none">
                             <span class="input-group-text transparent left-border-none"></span>
                         </div>
                     </div>
