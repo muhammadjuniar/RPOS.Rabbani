@@ -10,6 +10,7 @@ $(document).ready(function () {
   });
 });
 
+
 // button tambah kurang stok
 
 $(".btn-number").click(function (e) {
@@ -85,6 +86,7 @@ $(".input-number").keydown(function (e) {
     e.preventDefault();
   }
 });
+
 
 // hide and see password
 function seePassword() {
