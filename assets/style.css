@@ -704,6 +704,10 @@ h2{
     background: var(--primary_green);
 }
 
+.btn-rabbani-light {
+    background: var(--pink_light);
+}
+
 @media (min-width: 767px) {
     #mobile-topbar {
         display: none;

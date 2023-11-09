@@ -113,8 +113,8 @@ $(':input').keyup(function() {
   }
 });
 
-$("#userFieldAktivasi").keypress(function() {
-  if($(this).val().length >= 10) {
+$('#userFieldAktivasi').keypress(function() {
+  if($('#userFieldAktivasi').val().length >= 10) {
      $('#submitButtonAktivasi').removeAttr('disabled');
   } else {
      $('#submitButtonAktivasi').attr('disabled', true);   
