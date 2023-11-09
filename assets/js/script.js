@@ -112,11 +112,3 @@ $(':input').keyup(function() {
      $('#submitButton').attr('disabled', true);   
   }
 });
-
-$('#userFieldAktivasi').keypress(function() {
-  if($('#userFieldAktivasi').val().length >= 10) {
-     $('#submitButtonAktivasi').removeAttr('disabled');
-  } else {
-     $('#submitButtonAktivasi').attr('disabled', true);   
-  }
-});
