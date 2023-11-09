@@ -11,7 +11,7 @@
                     <div class="col-12">
                         <div class="input-group mb-3">
                             <span class="input-group-text transparent right-border-none"><img src="assets/images/user_fill.svg" alt=""></span>
-                            <input type="text" id="userFieldAktivasi" class="form-control left-border-none right-border-none">
+                            <input type="text" id="userFieldAktivasi" onkeyup="enableAktivasi()" class="form-control left-border-none right-border-none">
                             <span class="input-group-text transparent left-border-none"></span>
                         </div>
                     </div>
@@ -29,13 +29,4 @@
     </section>
 
 </main>
-<script>
-    $(':text').keyup(function() {
-        if($('#userFieldAktivasi').val().length >= 10) {
-            $('#submitButtonAktivasi').removeAttr('disabled');
-        } else {
-            $('#submitButtonAktivasi').attr('disabled', true);   
-        }
-    });
-</script>
 <?php include "./components/footer.php"; ?>

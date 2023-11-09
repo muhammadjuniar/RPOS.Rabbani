@@ -105,10 +105,19 @@ function seePassword() {
 
 // enabled & disabled login button 
 
-$(':input').keyup(function() {
+function enableLogin() {
   if($('#user_field').val().length >= 10 && $('#pass_field').val().length >= 10) {
      $('#submitButton').removeAttr('disabled');
   } else {
      $('#submitButton').attr('disabled', true);   
   }
-});
+};
+
+
+function enableAktivasi() {
+  if($('#userFieldAktivasi').val().length >= 10) {
+      $('#submitButtonAktivasi').removeAttr('disabled');
+  } else {
+      $('#submitButtonAktivasi').attr('disabled', true);   
+  }
+};
