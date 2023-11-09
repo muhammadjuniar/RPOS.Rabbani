@@ -30,7 +30,7 @@
 
 </main>
 <script>
-    $('#userFieldAktivasi').keypress(function() {
+    $('#userFieldAktivasi').keyup(function() {
         if($('#userFieldAktivasi').val().length >= 10) {
             $('#submitButtonAktivasi').removeAttr('disabled');
         } else {
