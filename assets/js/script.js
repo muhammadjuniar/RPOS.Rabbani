@@ -85,3 +85,38 @@ $(".input-number").keydown(function (e) {
     e.preventDefault();
   }
 });
+
+// hide and see password
+function seePassword() {
+  var x = document.getElementById("pass_field");
+  var eye = document.getElementById("hide_pass");
+  var eye_slice = document.getElementById("show_pass");
+  if (x.type === "password") {
+    x.type = "text";
+    eye.style.display = "block";
+    eye_slice.style.display = "none";
+  } else {
+    x.type = "password";
+    eye.style.display = "none";
+    eye_slice.style.display = "block";
+  }
+};
+
+
+// enabled & disabled login button 
+
+$(':input').keyup(function() {
+  if($('#user_field').val().length >= 10 && $('#pass_field').val().length >= 10) {
+     $('#submitButton').removeAttr('disabled');
+  } else {
+     $('#submitButton').attr('disabled', true);   
+  }
+});
+
+$("#userFieldAktivasi").keypress(function() {
+  if($(this).val().length >= 10) {
+     $('#submitButtonAktivasi').removeAttr('disabled');
+  } else {
+     $('#submitButtonAktivasi').attr('disabled', true);   
+  }
+});
