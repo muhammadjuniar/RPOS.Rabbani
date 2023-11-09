@@ -145,3 +145,17 @@ Preloader();
 } else {
 document.querySelector('#preloader').style.display = "none";
 }
+
+
+// Scanner
+
+function onScanSuccess(decodedText, decodedResult) {
+  // console.log(`Code scanned = ${decodedText}`, decodedResult);
+  // document.getElementById('result').innerHTML = decodedText;
+  window.location.replace(`stockopname.php?keyword=${decodedText}`);
+}
+var html5QrcodeScanner = new Html5QrcodeScanner(
+  "qr-reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess);
+
+// Scanner
