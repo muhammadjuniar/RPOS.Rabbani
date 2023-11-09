@@ -87,8 +87,11 @@ $(".input-number").keydown(function (e) {
   }
 });
 
+// button tambah kurang stok
+
 
 // hide and see password
+
 function seePassword() {
   var x = document.getElementById("pass_field");
   var eye = document.getElementById("hide_pass");
@@ -103,6 +106,8 @@ function seePassword() {
     eye_slice.style.display = "block";
   }
 };
+
+// hide and see password
 
 
 // enabled & disabled login button 
@@ -123,3 +128,20 @@ function enableAktivasi() {
       $('#submitButtonAktivasi').attr('disabled', true);   
   }
 };
+
+// enabled & disabled login button 
+
+
+// Preloader
+
+window.onload = function Preloader() {
+  setTimeout(() => {
+      document.querySelector('#preloader').style.display = "none";
+  }, 2000)
+};
+if (!sessionStorage.getItem('doNotShow')) {
+sessionStorage.setItem('doNotShow', true);
+Preloader();
+} else {
+document.querySelector('#preloader').style.display = "none";
+}

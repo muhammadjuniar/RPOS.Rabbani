@@ -19,3 +19,7 @@
     <title>RPOS</title>
   </head>
   <body class="col-12 col-lg-4">
+    
+  <div id="preloader">
+    <img src="assets/images/preloader.svg" alt="preloader" />
+  </div>
