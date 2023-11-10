@@ -9,9 +9,12 @@
                     <div class="col">
                         <div class="d-flex justify-content-between">
                             <p>Ahlan,</p>
-                            <div class="active-status">
-                                <p>Aktif sampai 05-08-2024 
-                                <span class="circle"></span></p>
+                            <div class="active-status" style="display:flex;flex-direction: row">
+                                <p>Aktif sampai 05-08-2024
+                                    <div class="outer">
+                                        <div class="inner"></div>
+                                    </div>
+                                </p> 
                             </div>
                         </div>
                     </div>
@@ -111,6 +114,7 @@
                         </a>
                     </div>
                     <div class="mt-5 mb-4">
+                        <a href="report.php">
                         <div class="d-flex align-items-center" style="flex-direction:column">
                             <div class="feature-items">
                                 <span >
@@ -121,6 +125,7 @@
                                 Laporan
                             </div>
                         </div>
+                        </a>
                     </div>
                 </div>
             </div>

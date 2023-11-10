@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/icon-rabbani.png">
+
     <!-- Bootstrap CSS -->
     <link href="assets/bootstrap-5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/style.css" rel="stylesheet">
