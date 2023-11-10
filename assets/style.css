@@ -171,7 +171,7 @@ a {
 
 .main-container-product {
     background: #ffffff;
-    min-height: 900px;
+    min-height: 100vh;
 }
 
 .main-container-stock {
@@ -1404,12 +1404,23 @@ h2{
     line-height: 16px;
 }
 
-.nav {
+#laporan-topbar .nav {
     overflow-x: auto;
     overflow-y:hidden;
     flex-wrap: nowrap;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#laporan-topbar .nav::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+#laporan-topbar .nav {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 /* Hide text in the navigation tabs by default */

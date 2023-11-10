@@ -55,7 +55,7 @@
             <div class="row pt-3 mb-1" data-bs-toggle="modal" data-bs-target="#updateModal">
                 <div class="col-lg-12">
                     <div class="row product-detail">
-                        <div class="col-2"><img src="https://file.1itmedia.co.id/7f68e9756b43a3efdb840d81b8056a32.jpg" alt="Avatar" class="avatar"></div>
+                        <div class="col-2"><img class="round" width="45" height="45" avatar="Dresslim Sebia"></div>
                         <div class="col-10">
                             <div class="row">
                                 <div class="col-12"><img style="width:30px;height:30px;position: relative;top: -1px;margin-right: 6px;" src="assets/images/barcode.svg" alt=""><span class="product-code">BAA1CB09042A241</span></div>
@@ -72,7 +72,7 @@
             <div class="row pt-3 mb-1" data-bs-toggle="modal" data-bs-target="#updateModal">
                 <div class="col-lg-12">
                     <div class="row product-detail">
-                        <div class="col-2"><img src="https://file.1itmedia.co.id/7f68e9756b43a3efdb840d81b8056a32.jpg" alt="Avatar" class="avatar"></div>
+                        <div class="col-2"><img class="round" width="45" height="45" avatar="Dresslim Sebia"></div>
                         <div class="col-10">
                             <div class="row">
                                 <div class="col-12"><img style="width:30px;height:30px;position: relative;top: -1px;margin-right: 6px;" src="assets/images/barcode.svg" alt=""><span class="product-code">BAA1CB09042A241</span></div>
@@ -89,7 +89,7 @@
             <div class="row pt-3 mb-1" data-bs-toggle="modal" data-bs-target="#updateModal">
                 <div class="col-lg-12">
                     <div class="row product-detail">
-                        <div class="col-2"><img src="https://file.1itmedia.co.id/7f68e9756b43a3efdb840d81b8056a32.jpg" alt="Avatar" class="avatar"></div>
+                        <div class="col-2"><img class="round" width="45" height="45" avatar="Dresslim Sebia"></div>
                         <div class="col-10">
                             <div class="row">
                                 <div class="col-12"><img style="width:30px;height:30px;position: relative;top: -1px;margin-right: 6px;" src="assets/images/barcode.svg" alt=""><span class="product-code">BAA1CB09042A241</span></div>
