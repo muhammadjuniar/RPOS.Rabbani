@@ -60,15 +60,16 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <a href="scanner.php">
-                    <div class="d-flex align-items-center">
-                        <div class="feature-items-stock">
-                            <span >
-                                <img src="assets/images/barcode_scanner.svg" width="24" height="24" alt="...">
-                            </span>
+                    <form action="scanner.php" name="scanner" method="POST">
+                        <input type="hidden" value="stock" name="detect-scanner">
+                        <div class="d-flex align-items-center" onclick="document.forms['scanner'].submit();">
+                            <div class="feature-items-stock">
+                                <span>
+                                    <img src="assets/images/barcode_scanner.svg" width="24" height="24" alt="...">
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    </a>
+                    </form>
                 </div>
                 <div class="col-2">
                     <div class="d-flex align-items-center">

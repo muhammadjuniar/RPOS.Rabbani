@@ -11,24 +11,24 @@
                     <div class="col-12">
                         <div class="input-group mb-3">
                             <span class="input-group-text transparent right-border-none"><img src="assets/images/user_fill.svg" alt=""></span>
-                            <input type="text" id="user_field" onkeyup="enableLogin()" class="form-control left-border-none" aria-label="Amount (to the nearest dollar)">
+                            <input type="text" id="user_field" onkeyup="enableLogin()" onchange="enableLogin()" class="form-control left-border-none" aria-label="Amount (to the nearest dollar)">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="input-group mb-3">
                             <span class="input-group-text transparent right-border-none"><img src="assets/images/lock_fill.svg" alt=""></span>
-                            <input type="password" id="pass_field" onkeyup="enableLogin()" class="form-control left-border-none right-border-none" aria-label="Amount (to the nearest dollar)">
+                            <input type="password" id="pass_field" onkeyup="enableLogin()" onchange="enableLogin()" class="form-control left-border-none right-border-none" aria-label="Amount (to the nearest dollar)">
                             <span class="input-group-text transparent left-border-none" onclick="seePassword()"><img id="show_pass" src="assets/images/visibility_off_fill.svg" alt=""><img id="hide_pass" src="assets/images/visibility_fill.svg" alt="" style="display:none;"></span>
                         </div>
                         <div>
-                            <button id="submitButton" class="btn btn-success w-100 login-button" disabled>
+                            <button id="submitButton" class="btn btn-success w-100 login-button" disabled="true">
                                 Login
                             </button>
                         </div>
                     </div>
                 </div>
             </form>
-            <div class="sub-text mt-4">Belum terdaftar jadi reseller? <span class="link-text">Registrasi</span></div>
+            <!-- <div class="sub-text mt-4">Belum terdaftar jadi reseller? <span class="link-text">Registrasi</span></div> -->
             <div class="sub-text fixed-bot">Akun belum diaktivasi? <span class="link-text"><a href="aktivasi.php">Aktivasi</a></span></div>
         </div>
     </section>
