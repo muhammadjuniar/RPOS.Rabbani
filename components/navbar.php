@@ -1,7 +1,7 @@
         <section id="navbar">
             <nav class="navbar navbar-rabbani navbar-dark navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom">
                 <div class="half-circle">
-                    <a href="#" class="nav-link text-center">
+                    <a href="penjualan.php" class="nav-link text-center">
                         <div class="bubble_circle">
                             <div class="icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

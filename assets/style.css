@@ -172,6 +172,7 @@ a {
 .main-container-product {
     background: #ffffff;
     min-height: 100vh;
+    padding-bottom: 120px;
 }
 
 .main-container-stock {
@@ -186,7 +187,7 @@ a {
 .main-container-report-detailed {
     background: #ffffff;
     min-height: 100vh;
-
+    padding-bottom: 120px;
 }
 
 .pageTop {
@@ -878,7 +879,6 @@ h2{
 
 .stock-opname input[type="date"] {
     position: relative;
-    padding: 10px;
 }
   
 .stock-opname input[type="date"]::-webkit-calendar-picker-indicator {
@@ -897,7 +897,7 @@ h2{
     width: 15px;
     height: 20px;
     position: absolute;
-    right: -4px;
+    right: -6px;
     color: #fff;
 }
 
@@ -1311,6 +1311,7 @@ h2{
 
 #laporan-topbar {
     background: #ffffff;
+    margin-bottom: 120px;
 }
 
 #laporan-topbar .separator {
@@ -1340,6 +1341,8 @@ h2{
     padding: 10px 10px 5px 10px;
     margin-left: -10px;
 }
+
+#laporan-topbar .info-tab input::-webkit-date-and-time-value{ text-align:left; }
 
 #laporan-topbar .info-tab input[type="date"]::-webkit-calendar-picker-indicator {
     color: transparent;
@@ -1405,6 +1408,7 @@ h2{
 }
 
 #laporan-topbar .nav {
+    background: #ffffff;
     overflow-x: auto;
     overflow-y:hidden;
     flex-wrap: nowrap;
@@ -1446,6 +1450,10 @@ h2{
 
 .nav-item .active .inactive-img {
     display: none;
+}
+
+#laporan-topbar .tab-content {
+    padding-top: 72px;
 }
 
 /* Laporan */
@@ -1550,3 +1558,232 @@ h2{
         right: 30px;
     }
 }
+
+/* Detailed Laporan */
+
+
+/* Penjualan */
+
+#penjualan-topbar {
+    background: #ffffff;
+}
+
+#penjualan-topbar .container {
+    background: #ffffff;
+}
+
+#penjualan-topbar .nav {
+    overflow-x: auto;
+    overflow-y:hidden;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#penjualan-topbar li button.active {
+    background: var(--pink_rabbani);
+    border-radius: 20px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#penjualan-topbar .nav::-webkit-scrollbar {
+    display: none;
+}
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+#penjualan-topbar .nav {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide text in the navigation tabs by default */
+#penjualan-topbar .nav-item span, .nav-item .active-img {
+    display: none;
+}
+/* Show the one that's active */
+#penjualan-topbar .nav-item .active span, .nav-item .active .active-img {
+    display: inline-block;
+}
+
+#penjualan-topbar .nav-item .active span {
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap;
+    margin-left: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+#penjualan-topbar .nav-item .active .inactive-img {
+    display: none;
+}
+
+#data-penjualan {
+    padding-top: 72px;
+}
+
+.data-penjualan {
+    color: var(--white_text);
+    font-family: 'Roboto', sans-serif;
+    background: var(--pink_light);
+    padding: 24px 0 24px 0;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.data-penjualan .label {
+    margin-top: -10px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.data-penjualan .invoice-data {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.data-penjualan .text-invoice {
+    padding-right: 0 !important;
+    padding-top: 1px;
+}
+
+.data-penjualan .text-date {
+    padding-top: 2px;
+}
+
+.data-penjualan .custom-date {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    padding:0;
+    background:transparent;
+    color:white;
+    border:none;
+}
+
+.data-penjualan .text-total {
+    margin-top: -10px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+}
+
+.data-penjualan .number-total {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.number-total sup {
+    top: -15px;
+    color: var(--white_text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 15px; /* 107.143% */
+}
+
+.data-penjualan input[type="date"] {
+    position: relative;
+}
+  
+.data-penjualan input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background: none;
+    z-index: 1;
+}
+  
+.data-penjualan input[type="date"]:before {
+    color: transparent;
+    background: none;
+    display: block;
+    font-family: "Font Awesome 5 Free";
+    content: "\f0d7";
+    /* This is the calendar icon in FontAwesome */
+    width: 15px;
+    height: 20px;
+    position: absolute;
+    right: -6px;
+    color: #fff;
+}
+
+#pay-button {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 90px; /* Place the button at the bottom of the page */
+    right: 15px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: var(--primary_green); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 100px; /* Rounded corners */
+    font-size: 12px; /* Increase font size */
+    width: 100px;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 415px) {
+    
+    .data-penjualan .text-invoice {
+        padding-top: 2px;
+    }
+
+    .data-penjualan .custom-date {
+        padding-left: 25px;
+    }
+    
+}
+
+@media (max-width: 392px) {
+    
+    .data-penjualan .text-invoice {
+        padding-top: 3px;
+    }
+
+    .data-penjualan .custom-date {
+        padding-left: 22px;
+    }
+    
+}
+
+@media (max-width: 376px) {
+    .data-penjualan .invoice-data {
+        font-size: 12px;
+    }
+    
+    .data-penjualan .custom-date {
+        font-size: 12px;
+        padding-left: 30px;
+    }
+    
+}
+
+@media (max-width: 282px) {
+    
+    .data-penjualan .invoice-data {
+        font-size: 9px;
+    }
+    
+    .data-penjualan .custom-date {
+        font-size: 9px;
+        padding-top: 5px;
+        padding-left: 20px !important;
+    }
+    
+}
+
+/* Penjualan */
