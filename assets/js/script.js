@@ -240,3 +240,144 @@ document.querySelector('#preloader').style.display = "none";
   }
 
 })(window, document);
+
+
+/* Format 3 digit */
+var format3Digit = document.getElementById('format-digit');
+var formatDigitDisc = document.getElementById('discount-value');
+format3Digit.addEventListener('keyup', function(e)
+{
+    format3Digit.value = formatRupiah(this.value);
+});
+
+formatDigitDisc.addEventListener('keyup', function(e)
+{
+    formatDigitDisc.value = formatRupiah(this.value);
+});
+
+/* Fungsi */
+function formatRupiah(angka)
+{
+    var number_string = angka.replace(/[^,\d]/g, '').toString(),
+        split       = number_string.split(','),
+        sisa        = split[0].length % 3,
+        rupiah      = split[0].substr(0, sisa),
+        ribuan      = split[0].substr(sisa).match(/\d{3}/gi);
+        
+    if (ribuan) {
+        separator = sisa ? '.' : '';
+        rupiah += separator + ribuan.join('.');
+    }
+    
+    rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+    return rupiah;
+}
+
+function formatRupiahJs(angka)
+{
+    var number_string = angka.toString().replace(/[^,\d]/g, ''),
+        split       = number_string.split(','),
+        sisa        = split[0].length % 3,
+        rupiah      = split[0].substr(0, sisa),
+        ribuan      = split[0].substr(sisa).match(/\d{3}/gi);
+        
+    if (ribuan) {
+        separator = sisa ? '.' : '';
+        rupiah += separator + ribuan.join('.');
+    }
+    
+    rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+    return rupiah;
+}
+
+/* Format 3 digit */
+
+
+/* Show Discount */
+
+$('#checked-discount').on('change', function() { 
+  // From the other examples
+  if (this.checked) {
+    $('#discount-desc').css("display", "none");
+    $('#discount-input').css("display", "");
+  }else{
+    $('#discount-desc').css("display", "");
+    $('#discount-input').css("display", "none");
+    $('#discount-value').val("");
+    changeDiscount();
+    getAmount();
+  }
+});
+
+/* Show Discount */
+
+
+/* Get Amount */
+
+function changeDiscount(){
+  var discount = $('#discount-value').val();
+  var valueDiscount = discount.replace('.','');
+  var amount = $('#amount').html();
+  var amountNoRp = amount.slice(2);
+  var amountFormated = amountNoRp.replace('.','');
+
+  var plusDiscount = 0;
+  plusDiscount = amountFormated - valueDiscount;
+
+  $('#format-digit').val(formatRupiahJs(plusDiscount));
+}
+
+
+function getAmount(){
+  var value = $('#format-digit').val();
+  var valueFormated = value.replace('.','');
+  var discount = $('#discount-value').val();
+  var valueDiscount = discount.replace('.','');
+  var qty = $('#total-qty').html();
+  var amount = $('#amount').html();
+  var amountNoRp = amount.slice(2);
+  var amountFormated = amountNoRp.replace('.','');
+
+  var sum_value = 0;
+  var amountAll = 0;
+
+  amountAll = amountFormated - valueDiscount;
+  sum_value = valueFormated - amountAll;
+
+  if(sum_value >= 0){
+    $('#total_value').html('Rp'+formatRupiahJs(sum_value));
+    $('#ringkasan-total-harga').html('Rp'+formatRupiahJs(amountFormated));
+    $('#ringkasan-total-qty').html(qty);
+    $('#ringkasan-total-diskon').html('Rp'+formatRupiahJs(valueDiscount));
+    $('#ringkasan-total-dibayar').html('Rp'+formatRupiahJs(valueFormated));
+    $('#ringkasan-total-kembalian').html('Rp'+formatRupiahJs(sum_value));
+    $('#ringkasan-total-keseluruhan').html('Rp'+formatRupiahJs(amountAll));
+    $('#number-total-tagihan').html(formatRupiahJs(amountAll));
+  }
+}
+
+function getReturValue(){
+  
+  var qtyRetur = $('#retur-qty').html();
+  var amountRetur = $('#retur-amount').html();
+  var amountNoRpRetur = amountRetur.slice(2);
+  var amountFormatedRetur = amountNoRpRetur.replace('.','');
+  var discountRetur = $('#retur-discount').html();
+  var valueDiscountRetur = discountRetur.replace('.','');
+
+  var totalAmount = 0;
+
+  totalAmount = amountFormatedRetur - valueDiscountRetur;
+
+  $('#number-total-retur').html(formatRupiahJs(totalAmount));
+  $('#ringkasan-retur-qty').html(qtyRetur);
+  $('#ringkasan-retur-total').html('Rp'+formatRupiahJs(amountFormatedRetur));
+  $('#ringkasan-retur-diskon').html('Rp'+formatRupiahJs(valueDiscountRetur));
+  $('#ringkasan-retur-keseluruhan').html('Rp'+formatRupiahJs(totalAmount));
+}
+
+// window.onload = function(){
+//   document.getElementById("format-digit").value = document.getElementById("amount").innerHTML.slice(2);
+//   getAmount();
+// }
+/* Get Amount */
