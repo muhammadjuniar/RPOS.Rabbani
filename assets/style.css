@@ -6,6 +6,7 @@
     --primary_green: #67C57B;
     --pink_light: #ff99cc;
     --pink_rabbani: #EC088D;
+    --pink_bani: #DD0B86;
     --dark_text: #202C44;
     --green-2: #27AE60;
     --checklist: rgba(189, 195, 213, 0.90);
@@ -182,12 +183,18 @@ a {
 
 .main-container-stock-selesai {
     background: transparent;
+    min-height: 100vh;
 }
 
 .main-container-report-detailed {
     background: #ffffff;
     min-height: 100vh;
     padding-bottom: 120px;
+}
+
+.main-container-pembayaran {
+    background: transparent;
+    margin-bottom: 140px;
 }
 
 .pageTop {
@@ -1188,7 +1195,7 @@ h2{
     background: var(--white_text);
     margin: 0;
     margin-top: 65px;
-    height: 600px;
+    min-height: 100vh;
 }
 
 #stock-opname-success .img-stock-success {
@@ -1294,7 +1301,7 @@ h2{
     line-height: 24px;
 }
 
-@media (max-width: 416px) {
+/* @media (max-width: 416px) {
     #stock-opname-success {
         height: 830px;
     }
@@ -1304,7 +1311,7 @@ h2{
     #stock-opname-success {
         height: 778px;
     }
-}
+} */
 
 
 /* Laporan */
@@ -1736,6 +1743,23 @@ h2{
     box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
+#retur-button {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 90px; /* Place the button at the bottom of the page */
+    right: 15px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: var(--primary_green); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 100px; /* Rounded corners */
+    font-size: 12px; /* Increase font size */
+    width: 110px;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
 @media (max-width: 415px) {
     
     .data-penjualan .text-invoice {
@@ -1787,3 +1811,460 @@ h2{
 }
 
 /* Penjualan */
+
+
+/* Pembayaran */
+
+
+#data-pembayaran {
+    padding-top: 62px;
+}
+
+.data-pembayaran {
+    color: var(--white_text);
+    font-family: 'Roboto', sans-serif;
+    background: var(--pink_light);
+    padding: 24px 0 24px 0;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.data-pembayaran .label {
+    margin-top: -10px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+.data-pembayaran .invoice-data {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+}
+
+.data-pembayaran .text-invoice {
+    padding-right: 0 !important;
+    padding-top: 1px;
+}
+
+.data-pembayaran .text-date {
+    padding-top: 2px;
+}
+
+.data-pembayaran .custom-date {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    padding:0;
+    background:transparent;
+    color:white;
+    border:none;
+}
+
+.data-pembayaran .text-total {
+    margin-top: -10px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+
+}
+
+.data-pembayaran .number-total {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+
+#pembayaran-items {
+    display: flex;
+}
+
+#pembayaran-items .container-pembayaran {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px 10px 15px 10px;
+    margin-top: 10px;
+}
+
+#pembayaran-items .container-pembayaran .item-details .section-title {
+    color: var(--dark_text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+#pembayaran-items .container-pembayaran .item-details .section-subtitle {
+    color: var(--second-text-color);
+    
+    /* menu_text */
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+#pembayaran-items .container-pembayaran .item-details .btn-tunai {
+    border-radius: 100px;
+    border: 1px solid var(--pink_bani);
+    background: rgba(221, 11, 134, 0.10);
+    padding: 2px 24px 2px 24px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    /* menu_text */
+    color: var(--dark_text);
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+#pembayaran-items .container-pembayaran .item-details .form-control {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+
+    color: var(--dark_text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+#pembayaran-items .container-pembayaran .item-details .form-discount {
+    border: none;
+    border-radius: 20px;
+    box-shadow: none;
+    background: #F4F6F8;
+    padding: 10px 20px 10px 20px;
+    width: 170px;
+    
+    color: var(--dark_text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+/* Custom Form Switch */
+
+#pembayaran-items .container-pembayaran .item-details .form-switch.form-switch-md {
+    padding-left: 4.5em;
+    height: 2.5em;
+}
+
+#pembayaran-items .container-pembayaran .item-details .form-check-input {
+    background-color: #78788029;
+    box-shadow: none;
+    border: none;
+}
+
+#pembayaran-items .container-pembayaran .item-details .form-check-input:checked {
+    background-color: var(--pink_light);
+    box-shadow: none;
+    border: none;
+    
+}
+
+#pembayaran-items .container-pembayaran .item-details .form-switch.form-switch-md .form-check-input {
+    margin-left: -4.5em;
+    height: 2em;
+    width: 4em;
+}
+
+#pembayaran-items .container-pembayaran .item-details .form-switch.form-switch-md .form-check-label {
+    padding-top: 0.5em;
+}
+
+#pembayaran-items .container-pembayaran .item-details .form-switch.form-switch-lg {
+    padding-left: 8.5em;
+    height: 4.5em;
+}
+
+#pembayaran-items .container-pembayaran .item-details .form-switch.form-switch-lg .form-check-input {
+    margin-left: -8.5em;
+    height: 4em;
+    width: 8em;
+}
+
+#pembayaran-items .container-pembayaran .item-details .form-switch.form-switch-lg .form-check-label {
+    padding-top: 1.5em;
+}
+
+/* Custom Form Switch */
+
+
+#pembayaran-items .text-label {
+    color: var(--primary_abu);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+#pembayaran-items .text-tagihan-price {
+    color: var(--dark_text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+#pembayaran-items .text-price {
+    color: var(--dark_text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+#pembayaran-items .text-total-price {
+    color: var(--primary_green);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+#pembayaran-items .text-kembalian {
+    color: var(--pink_rabbani);
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+}
+
+
+/* Modal Pembayaran */
+
+#pembayaran-modal .modal-dialog {
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    right: 10px;
+    z-index: 10040;
+    overflow: auto;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+#pembayaran-modal .confirm-title {
+    color: var(--dark_text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+#pembayaran-modal .confirm-content {
+    color: var(--second-text-color, #99A6C0);
+    /* body_text */
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#pembayaran-modal .left-button {
+    margin-left:20px;
+    margin-right:-8px;
+}
+
+#pembayaran-modal .right-button {
+    margin-left:-8px;
+    margin-right: 20px;
+}
+
+#pembayaran-modal .btn-simpan {
+    width: auto;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--pink_rabbani);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    /* body_text */
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+#pembayaran-modal .btn-simpan-cetak {
+    width: auto;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--primary_green);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    /* body_text */
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+/* Modal Pembayaran */
+
+
+
+#pembayaran-success {
+    font-family: 'Roboto', sans-serif;
+    background: var(--white_text);
+    margin: 0;
+    margin-top: 65px;
+    min-height: 100vh;
+}
+
+#pembayaran-success .img-stock-success {
+    margin-top: 20px;
+}
+
+#pembayaran-success .text-stock-success {
+    color: var(--primary_green);
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+#pembayaran-success .detail-success .label {
+    color: var(--primary_abu);
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin-top: 10px;
+}
+
+#pembayaran-success .detail-success .vertical-separator {
+    /* border: 2px solid rgba(189, 195, 213, 0.90); */
+    width:60px;
+    height:40px;
+    margin-top: 10px;
+	background: linear-gradient(to right, 
+	                              transparent 0%, 
+	                              transparent calc(50% - 0.81px), 
+	                              rgba(189, 195, 213, 0.90) calc(50% - 0.8px), 
+	                              rgba(189, 195, 213, 0.90) calc(50% + 0.8px), 
+	                              transparent calc(50% + 0.81px), 
+	                              transparent 100%); 
+}
+
+#pembayaran-success .detail-success .code {
+    color: var(--second-text-color);
+    /* body_text */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+#pembayaran-success .detail-success .date {
+    color: var(--primary_abu);
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; 
+    margin-top: 5px;
+}
+
+#pembayaran-success .detail-success .count-number {
+    color: var(--primary_green);
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+#pembayaran-success .detail-success .detail-label {
+    margin-top: 10px;
+    color: var(--second-text-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+#pembayaran-success .buttons {
+    position: fixed; /* Fixed/sticky position */
+    bottom: 10px; /* Place the button at the bottom of the page */
+    z-index: 99; /* Make sure it does not overlap */
+    padding-right: 10px;
+}
+
+#pembayaran-success .buttons .cetak-button {
+    border-radius: 10px;
+    color: var(--primary_abu);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+#pembayaran-success .buttons .stock-button {
+    border-radius: 10px;
+    color: var(--primary_green);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+#pembayaran-success .buttons .tambah-button {
+    margin-top: 10px;
+    border-radius: 10px;
+    color: var(--white_text, #FFF);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+
+
+
+/* Pembayaran */

@@ -9,16 +9,20 @@
             <!-- Tabs -->
             <ul class="nav nav-pills" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
+                    <a href="penjualan.php">
                     <button class="nav-link active d-flex align-items-center" id="pills-penjualan-tab" data-bs-toggle="pill" data-bs-target="#pills-penjualan" type="button" role="tab" aria-controls="pills-penjualan" aria-selected="false">
                         <img class="inactive-img" src="assets/images/menu_lap_jual.svg" alt="">
                         <img class="active-img" src="assets/images/menu_lap_jual_active.svg" alt=""><span>Penjualan</span>
                     </button>
+                    </a>
                 </li>
                 <li class="nav-item" role="presentation">
+                    <a href="retur.php">
                     <button class="nav-link d-flex align-items-center" id="pills-retur-penjualan-tab" data-bs-toggle="pill" data-bs-target="#pills-retur-penjualan" type="button" role="tab" aria-controls="pills-retur-penjualan" aria-selected="false">
                         <img class="inactive-img" src="assets/images/menu_lap_retur_jual.svg" alt="">
-                        <img class="active-img" src="assets/images/menu_lap_retur_jual_active.svg" alt=""><span>Retur Penjualan</span>
+                        <img class="active-img" src="assets/images/menu_lap_retur_jual_active.svg" alt=""><span>Retur</span>
                     </button>
+                    </a>
                 </li>
             </ul>
             <!-- Tabs -->
@@ -152,7 +156,7 @@
                                 </div>
                                 <div class="row mb-2">
                                     <div class="col-6 text-label">Diskon</div>
-                                    <div class="col-6 text-end text-price"></div>
+                                    <div class="col-6 text-end text-price">Rp0</div>
                                 </div>
                                 <div class="row">
                                     <div class="col-12"><hr></div>
